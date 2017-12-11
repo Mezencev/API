@@ -1,16 +1,12 @@
-var mongoClient = require("mongodb").MongoClient;
+// Lab_1
+const http = require('http');
+const fs = require('fs');
+let file = fs.readFileSync('index.html');
 
-var url = "mongodb://localhost:27017/usersdb";
-mongoClient.connect(url, function(err, db){
+let app = http.createServer((req,res) => {
+    res.writeHead(200, {'Content-Type' : 'text/html'});
+    res.write('Hello, this is Tolik ' + decodeURIComponent(file));
+    res.end();
     
-   var collection = db.collection("users");
-   var user = {name: "Tom", age: 23};
-   collection.insertOne(user, function(err, result){
-        
-       if(err){ 
-           return console.log(err);
-       }
-       console.log(result.ops);
-       db.close();
-   });
-});
+}).listen(8080);
+console.log('listening on port 8080');
