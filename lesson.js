@@ -31,7 +31,7 @@ add.on('close', (req, res)=>{
 })
 add.on('listening', (req, res)=>{
     console.log('listen: port 8080..');
-})*/
+})
 //lab_3
 const events = require('events').EventEmitter;
 const logger = new events;
@@ -45,5 +45,14 @@ logger.on('message', (msg)=>{
     msgs.push(msg);
 })
 logger.emit('login', 'Tolik');
-logger.emit('message', 'hello my name ' + users);
+logger.emit('message', 'hello my name ' + users);*/
+function Person(firstname, lastname){
+    this.firstname = firstname;
+    this.lastname = lastname;
+}
+Person.prototype.greet = function(){
+    console.log('Hello, ' + this.firstname + ' ' + this.lastname);
+}
+var john = new Person('John', 'Doe');
+john.greet();
 
