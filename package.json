@@ -1,21 +1,33 @@
 {
-  "name": "nodejs",
+  "name": "forecast",
   "version": "1.0.0",
-  "description": "",
+  "description": "darksky",
   "main": "lesson.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Mezencev",
   "license": "ISC",
   "devDependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
+    "dark-sky-api": "^0.6.21",
     "express": "^4.16.2",
+    "forecastio": "^1.0.2",
     "mongodb": "^2.2.33",
     "postman": "^0.2.0",
+    "request": "^2.83.0",
     "socket.io": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mezencev/API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mezencev/API/issues"
+  },
+  "homepage": "https://github.com/Mezencev/API#readme"
 }
