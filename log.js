@@ -19,5 +19,7 @@ var person = {
 }
 person.greet();
 console.log(person['firstname']);*/
+let app = {"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}]};
 
-
+let msg = JSON.parse(app);
+console.log(msg.app);
